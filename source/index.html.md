@@ -3,7 +3,7 @@ title: API Reference
 
 language_tabs: # must be one of https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
   - php
-  - c#
+  - csharp
   - javascript
 
 toc_footers:
@@ -20,7 +20,7 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the Beitostølen Live API's
 ---
 
 # Introduction
@@ -34,6 +34,18 @@ This example API documentation page was created with [Slate](https://github.com/
 # Authentication
 
 > To authorize, use this code:
+
+```php
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
 
 ```javascript
 const kittn = require('kittn');
@@ -56,6 +68,18 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Festival
 
 ## Get All Events
+
+```php
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
 
 ```javascript
 const kittn = require('kittn');
@@ -104,23 +128,16 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Event
 
-```ruby
-require 'kittn'
+```php
+const kittn = require('kittn');
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+let api = kittn.authorize('meowmeowmeow');
 ```
 
-```python
-import kittn
+```csharp
+const kittn = require('kittn');
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
+let api = kittn.authorize('meowmeowmeow');
 ```
 
 ```javascript
@@ -158,24 +175,16 @@ ID | The ID of the kitten to retrieve
 
 ## Delete a Specific Kitten
 
-```ruby
-require 'kittn'
+```php
+const kittn = require('kittn');
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+let api = kittn.authorize('meowmeowmeow');
 ```
 
-```python
-import kittn
+```csharp
+const kittn = require('kittn');
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
+let api = kittn.authorize('meowmeowmeow');
 ```
 
 ```javascript
