@@ -63,3 +63,76 @@ Kittn expects for the API key to be included in all API requests to the server i
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
+
+## Login
+
+```php
+```
+
+```csharp
+```
+
+```javascript
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "token": "<YOUR TOKEN>",
+    "token_type": "bearer",
+    "expires_in": 3600
+}
+```
+
+This endpoint retrieves all events.
+
+### HTTP Request
+
+`POST https://auth.beitostolenlive.no/api/v1/login`
+
+### Form Data Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+email | false | Your username.
+password | false | Your password.
+
+<aside class="success">
+You will then use your token on all other requests!
+</aside>
+
+## Register
+
+```php
+```
+
+```csharp
+```
+
+```javascript
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "token": "<YOUR TOKEN>",
+    "token_type": "bearer",
+    "expires_in": 3600
+}
+```
+
+This endpoint retrieves all events.
+
+### HTTP Request
+
+`POST https://auth.beitostolenlive.no/api/v1/register`
+
+### Form Data Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+email | false | Your username.
+password | false | Your password.
+name | false | Your name.

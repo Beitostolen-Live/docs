@@ -28,9 +28,9 @@ let kittens = api.kittens.get();
   {
     "id": 1,
     "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+    "year": 2022,
+    "start_at": "2022-06-11",
+    "end_at": "2022-06-12"
   },
   {
     "id": 2,
@@ -42,7 +42,7 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all events.
 
 ### HTTP Request
 
