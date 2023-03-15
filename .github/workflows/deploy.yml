@@ -7,7 +7,13 @@ on:
 jobs:
   deploy:
     permissions:
+      pages: write
+      id-token: write
       contents: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
     env:
@@ -36,9 +42,17 @@ jobs:
 
     - run: bundle exec middleman build
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    # - name: Deploy
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./build
+    #     keep_files: true
+
+    - uses: actions/configure-pages@v1
+    - uses: actions/upload-pages-artifact@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-        keep_files: true
+        path: ./build
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1

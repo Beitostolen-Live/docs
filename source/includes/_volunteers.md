@@ -1,6 +1,6 @@
 # Volunteers
 
-## Get All Events
+## Get All Volunteers For Event
 
 ```javascript
 const kittn = require('kittn');
